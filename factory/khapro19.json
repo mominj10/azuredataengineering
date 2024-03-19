@@ -1,0 +1,9 @@
+{
+	"name": "khapro19",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "92f5b9bf-fe8d-4acf-8bb2-a9956da922f5",
+		"tenantId": "ce8ab8cb-ddad-4798-abd0-0f1494bf00b8"
+	}
+}
