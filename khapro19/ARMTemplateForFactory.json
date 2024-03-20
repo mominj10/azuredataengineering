@@ -91,7 +91,7 @@
 										"source": {
 											"type": "SqlServerSource",
 											"sqlReaderQuery": {
-												"value": "@{concat('select * from', item().SchemaName,'.',item().TableName)}",
+												"value": "@{concat('select * from ', item().SchemaName,'.',item().TableName)}",
 												"type": "Expression"
 											},
 											"queryTimeout": "02:00:00",
@@ -193,6 +193,20 @@
 								}
 							},
 							"enableStaging": false,
+							"enableSkipIncompatibleRow": true,
+							"logSettings": {
+								"enableCopyActivityLog": true,
+								"copyActivityLogSettings": {
+									"logLevel": "Warning",
+									"enableReliableLogging": false
+								},
+								"logLocationSettings": {
+									"linkedServiceName": {
+										"referenceName": "AzureDataLakeStorage1",
+										"type": "LinkedServiceReference"
+									}
+								}
+							},
 							"translator": {
 								"type": "TabularTranslator",
 								"typeConversion": true,
@@ -226,7 +240,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/address')]",
-				"[concat(variables('factoryId'), '/datasets/address_csv')]"
+				"[concat(variables('factoryId'), '/datasets/address_csv')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]"
 			]
 		},
 		{
