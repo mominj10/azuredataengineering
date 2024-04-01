@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDatabase3",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=pocserver22.database.windows.net;initial catalog=database;user id=momin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEI3MjE0RDUyLUNDRjctNEY3RS04MkRELUJDMDdENzQzN0M0N19jOTI2ZmJmNS0wYjg4LTRhYWYtYWQ5NS01YzI5YzQwNWZjOWEiDQp9"
+		}
+	}
+}
